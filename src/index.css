@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Book & Noble Brand */
+    --background: 120 22% 5%;
+    /* #0A0F0A */
+    --foreground: 36 50% 93%;
+    /* #F5F0E8 */
+
+    --card: 120 18% 7%;
+    /* #111A11 */
+    --card-foreground: 36 50% 93%;
+
+    --popover: 120 22% 5%;
+    --popover-foreground: 36 50% 93%;
+
+    --primary: 120 35% 17%;
+    /* #1C3A1C deep forest */
+    --primary-foreground: 36 50% 93%;
+
+    --secondary: 116 38% 25%;
+    /* #2D5A27 vibrant mid green */
+    --secondary-foreground: 36 50% 93%;
+
+    --muted: 120 8% 45%;
+    /* #6B7A6B */
+    --muted-foreground: 120 8% 60%;
+
+    --accent: 34 92% 43%;
+    /* #D4890A gold */
+    --accent-foreground: 120 35% 10%;
+
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 36 50% 93%;
+
+    --border: 116 30% 18%;
+    --input: 120 18% 10%;
+    --ring: 34 92% 43%;
+
+    --radius: 1rem;
+
+    --gold: 34 92% 43%;
+    --gold-glow: 34 92% 55%;
+    --forest: 120 35% 17%;
+    --forest-mid: 116 38% 25%;
+    --ink: 120 22% 3%;
+
+    --gradient-hero: radial-gradient(ellipse at center, hsl(116 38% 12%) 0%, hsl(120 22% 5%) 60%, hsl(120 22% 3%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(34 92% 48%), hsl(34 92% 38%));
+    --gradient-forest: linear-gradient(135deg, hsl(120 35% 17%), hsl(116 38% 25%));
+    --shadow-gold: 0 10px 40px -10px hsl(34 92% 43% / 0.5);
+    --shadow-deep: 0 25px 60px -20px hsl(120 50% 2% / 0.8);
+
+    --sidebar-background: 120 22% 5%;
+    --sidebar-foreground: 36 50% 93%;
+    --sidebar-primary: 34 92% 43%;
+    --sidebar-primary-foreground: 120 35% 10%;
+    --sidebar-accent: 116 38% 15%;
+    --sidebar-accent-foreground: 36 50% 93%;
+    --sidebar-border: 116 30% 18%;
+    --sidebar-ring: 34 92% 43%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html,
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'DM Sans', system-ui, sans-serif;
+    cursor: none;
+  }
+
+  ::selection {
+    background: hsl(var(--gold) / 0.4);
+    color: hsl(var(--foreground));
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .font-serif-display {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-dm-serif {
+    font-family: 'DM Serif Display', serif;
+  }
+
+  .font-sans-body {
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .text-gold {
+    color: hsl(var(--gold));
+  }
+
+  .bg-gold {
+    background: hsl(var(--gold));
+  }
+
+  .border-gold {
+    border-color: hsl(var(--gold));
+  }
+
+  .bg-forest {
+    background: hsl(var(--forest));
+  }
+
+  .bg-forest-mid {
+    background: hsl(var(--forest-mid));
+  }
+
+  .bg-ink {
+    background: hsl(var(--ink));
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-gold {
+    background: var(--gradient-gold);
+  }
+
+  .gradient-forest {
+    background: var(--gradient-forest);
+  }
+
+  .shadow-gold {
+    box-shadow: var(--shadow-gold);
+  }
+
+  .shadow-deep {
+    box-shadow: var(--shadow-deep);
+  }
+
+  .reveal-mask {
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: bottom;
+  }
+
+  .reveal-inner {
+    display: inline-block;
+    will-change: transform, opacity;
+  }
+
+  .grain {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.04;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .magnetic {
+    transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  @keyframes float-y {
+
+    0%,
+    100% {
+      translate: 0 -8px;
+    }
+
+    50% {
+      translate: 0 8px;
+    }
+  }
+
+  .anim-float {
+    animation: float-y 3s ease-in-out infinite;
+  }
+
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-150%) skewX(-20deg);
+    }
+
+    100% {
+      transform: translateX(250%) skewX(-20deg);
+    }
+  }
+
+  .shimmer-on-hover {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .shimmer-on-hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, hsl(0 0% 100% / 0.35), transparent);
+    transform: translateX(-150%) skewX(-20deg);
+    pointer-events: none;
+  }
+
+  .shimmer-on-hover:hover::after {
+    animation: shimmer 1s ease-out;
+  }
+
+  @keyframes ring-pulse {
+    0% {
+      box-shadow: 0 0 0 0 hsl(var(--gold) / 0.7);
+    }
+
+    70% {
+      box-shadow: 0 0 0 18px hsl(var(--gold) / 0);
+    }
+
+    100% {
+      box-shadow: 0 0 0 0 hsl(var(--gold) / 0);
+    }
+  }
+
+  .ring-pulse {
+    animation: ring-pulse 2s infinite;
+  }
+
+  @keyframes scroll-bounce {
+
+    0%,
+    100% {
+      transform: translateY(0);
+      opacity: 0.4;
+    }
+
+    50% {
+      transform: translateY(8px);
+      opacity: 1;
+    }
+  }
+
+  .anim-scroll-bounce {
+    animation: scroll-bounce 1.8s ease-in-out infinite;
+  }
+
+  @keyframes slow-rotate {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .anim-slow-rotate {
+    animation: slow-rotate 30s linear infinite;
+  }
+
+  .anim-slow-rotate-rev {
+    animation: slow-rotate 40s linear infinite reverse;
+  }
+
+  @keyframes drift-particle {
+    0% {
+      transform: translate(0, 0);
+      opacity: 0;
+    }
+
+    20% {
+      opacity: 1;
+    }
+
+    80% {
+      opacity: 1;
+    }
+
+    100% {
+      transform: translate(var(--dx, 40px), var(--dy, -120px));
+      opacity: 0;
+    }
+  }
+
+  @keyframes radial-pulse {
+
+    0%,
+    100% {
+      opacity: 0.15;
+      transform: scale(1);
+    }
+
+    50% {
+      opacity: 0.3;
+      transform: scale(1.05);
+    }
+  }
+
+  .anim-radial-pulse {
+    animation: radial-pulse 8s ease-in-out infinite;
+  }
+
+  .marquee-track {
+    display: inline-flex;
+    gap: 3rem;
+    will-change: transform;
+  }
+
+  @media (max-width: 768px) {
+
+    html,
+    body {
+      cursor: auto;
+    }
+  }
+}
