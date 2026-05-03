@@ -6,10 +6,26 @@ import { toast } from "sonner";
 const FloatingQuote = () => {
   const [open, setOpen] = useState(false);
 
-  const submit = (e: React.FormEvent) => {
+  const submit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setOpen(false);
-    toast.success("Quote request received! Check your inbox shortly.");
+    const formData = new FormData(e.target as HTMLFormElement);
+    const data = Object.fromEntries(formData.entries());
+    data.service = "Free Quote Request"; // Tagging this as a quote request
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) throw new Error('Failed');
+
+      setOpen(false);
+      toast.success("Quote request received! We'll be in touch shortly.");
+    } catch (error) {
+      toast.error("Failed to send request. Please try again later.");
+    }
   };
 
   return (
@@ -36,17 +52,20 @@ const FloatingQuote = () => {
             <form onSubmit={submit} className="space-y-4">
               <input
                 required
+                name="name"
                 placeholder="Your name"
                 className="w-full bg-input border border-border rounded-lg px-4 py-3 focus:border-gold focus:outline-none"
               />
               <input
                 required
+                name="email"
                 type="email"
                 placeholder="Email address"
                 className="w-full bg-input border border-border rounded-lg px-4 py-3 focus:border-gold focus:outline-none"
               />
               <textarea
                 required
+                name="message"
                 rows={3}
                 placeholder="Tell us briefly about your book..."
                 className="w-full bg-input border border-border rounded-lg px-4 py-3 focus:border-gold focus:outline-none resize-none"
