@@ -51,10 +51,13 @@ const Blog = () => {
           <div className="text-xs uppercase tracking-[0.4em] text-gold mb-3">◆ Insights</div>
           <SplitReveal
             as="h2"
-            text="From the Publishing Desk"
-            goldWords={[3]}
+            text="Expert Insights on Book Publishing & Amazon KDP"
+            goldWords={[5, 6, 7]}
             className="font-serif text-4xl md:text-5xl"
           />
+          <p className="text-muted-foreground mt-6 max-w-2xl mx-auto">
+            Stay ahead in your publishing journey with insights from industry professionals. Our blog offers practical advice on self publishing, Amazon KDP publishing, and building a successful author brand.
+          </p>
         </div>
 
         <div ref={ref} className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">

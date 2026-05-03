@@ -28,8 +28,8 @@ const SubscribeBanner = () => {
       </div>
 
       <div className="container relative z-10 py-12 md:py-16 flex flex-col md:flex-row items-center justify-between gap-8">
-        <h3 className="font-serif italic text-3xl md:text-4xl text-foreground max-w-md">
-          Stop Dreaming. Start Publishing.
+        <h3 className="font-serif italic text-3xl md:text-4xl text-foreground max-w-xl">
+          Join Thousands of Authors Using Our Professional Book Publishing Services
         </h3>
         <form
           onSubmit={(e) => e.preventDefault()}

@@ -59,16 +59,13 @@ const Impact = () => {
         <div className="space-y-6">
           <div className="text-xs uppercase tracking-[0.4em] text-gold">◆ Our Impact</div>
           <h2 className="font-serif text-4xl md:text-5xl text-foreground leading-tight">
-            A decade of <span className="text-gold italic">amplifying</span> author voices.
+            A Leading Book Publishing Company Delivering Global Author Success
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            Book & Noble was founded on a single principle: every great manuscript deserves a world-class
-            launch. We've turned debut authors into bestsellers, niche writers into category leaders, and
-            unknown voices into household names.
+            Book & Noble goes beyond basic publishing. We build author success stories. We have helped thousands of writers navigate self publishing and turn their manuscripts into professionally published books with global reach.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            Our network spans 40+ retailers, 60+ countries, and millions of devoted readers — and it's
-            growing every day.
+            From first-time authors searching for the best company to publish my first book to experienced writers expanding their audience through Amazon book publishing services, our approach is centered on quality, visibility, and long-term growth.
           </p>
         </div>
       </div>

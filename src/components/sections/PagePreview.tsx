@@ -3,11 +3,11 @@ import { gsap } from "gsap";
 import { Check } from "lucide-react";
 
 const features = [
-  "Chicago Style Compliant",
+  "Chicago Style–Compliant Formatting",
   "Custom Chapter Headings",
-  "Professional Margins & Gutters",
-  "Drop Caps & Ornaments",
-  "Print & eBook Ready",
+  "Balanced Margins and Gutters",
+  "Elegant Drop Caps and Stylistic Elements",
+  "Print and eBook Ready Files",
 ];
 
 const PagePreview = () => {
@@ -54,9 +54,12 @@ const PagePreview = () => {
             <div className="text-xs uppercase tracking-[0.3em] text-[hsl(116_38%_25%)] mb-3">
               Format Specifications
             </div>
-            <h3 className="font-serif text-2xl md:text-3xl mb-6 leading-tight">
-              Industry-standard interior typography.
+            <h3 className="font-serif text-2xl md:text-3xl mb-4 leading-tight">
+              Industry-Standard Interior Formatting for Every Genre
             </h3>
+            <p className="text-sm mb-6 opacity-80 font-medium">
+              We focus on delivering high-quality book formatting and publishing solutions that include:
+            </p>
             <ul className="space-y-3">
               {features.map((f) => (
                 <li key={f} className="flex items-center gap-3 text-sm">

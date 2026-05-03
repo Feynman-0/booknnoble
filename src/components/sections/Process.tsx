@@ -6,10 +6,10 @@ import SplitReveal from "../SplitReveal";
 import Counter from "../Counter";
 
 const steps = [
-  { n: 1, icon: BookOpen, title: "Free Consultation", desc: "We assess your manuscript, genre, and goals. Zero commitment, full clarity." },
-  { n: 2, icon: Pencil, title: "Editing & Revision", desc: "Professional developmental and copy editing with tracked changes and author approval." },
-  { n: 3, icon: Star, title: "Design & Formatting", desc: "Cover design, interior layout, eBook conversion, and ISBN registration." },
-  { n: 4, icon: Rocket, title: "Launch & Distribute", desc: "Global upload, Amazon listing, marketing launch, and ongoing royalty support." },
+  { n: 1, icon: BookOpen, title: "Free Consultation", desc: "Start with a personalized consultation where we evaluate your manuscript, genre, and publishing goals. We provide clear guidance on the best path forward, including full service book publishing packages according to your needs." },
+  { n: 2, icon: Pencil, title: "Editing & Professional Revision", desc: "Our editors enhance your manuscript through detailed editing and proofreading. This stage ensures your book meets industry standards." },
+  { n: 3, icon: Star, title: "Cover Design & Book Formatting", desc: "We handle every aspect of design, from eye-catching covers to professional KDP book formatting services. Your book is structured for seamless readability and optimized for Kindle, paperback, and global distribution." },
+  { n: 4, icon: Rocket, title: "Launch & Distribution", desc: "We finalize your Amazon book publishing services, including expert Amazon KDP setup, keyword optimization, and category placement." },
 ];
 
 const Process = () => {
@@ -34,8 +34,8 @@ const Process = () => {
           <div className="text-xs uppercase tracking-[0.4em] text-gold mb-3">◆ How It Works</div>
           <SplitReveal
             as="h2"
-            text="Your Journey to Publication"
-            goldWords={[3]}
+            text="Your Journey to Amazon KDP Success"
+            goldWords={[4, 5]}
             className="font-serif text-4xl md:text-6xl text-foreground"
           />
         </div>

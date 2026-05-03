@@ -24,8 +24,8 @@ import { useEffect } from "react";
 
 const Index = () => {
   useEffect(() => {
-    document.title = "Book & Noble — Premium Digital Publishing in 48 Hours";
-    const desc = "From manuscript to marketplace. Book & Noble handles editing, formatting, cover design, and global distribution for ambitious authors.";
+    document.title = "Professional Book Publishing Services | Book & Noble";
+    const desc = "Publish your book with expert Amazon KDP support. Full-service book publishing, writing, formatting, and global distribution for authors.";
     let meta = document.querySelector('meta[name="description"]');
     if (!meta) {
       meta = document.createElement("meta");

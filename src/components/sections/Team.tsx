@@ -34,12 +34,12 @@ const Team = () => {
         <div className="text-xs uppercase tracking-[0.4em] text-gold mb-3">◆ The Team</div>
         <SplitReveal
           as="h2"
-          text="Meet the Team Behind the Magic"
-          goldWords={[5]}
+          text="Meet Our Expert Team Behind the Magic"
+          goldWords={[2]}
           className="font-serif text-4xl md:text-5xl text-foreground"
         />
-        <p className="text-muted-foreground mt-6 max-w-2xl mx-auto">
-          Editors, designers, marketers, and technologists — all obsessed with one thing: your book's success.
+        <p className="text-muted-foreground mt-6 max-w-3xl mx-auto">
+          Behind every successful book is a team that understands the publishing journey inside out. Our specialists include experienced editors, creative designers, Amazon KDP publishing experts, and marketing strategists who work together to deliver high-quality book publishing services to each author.
         </p>
 
         <div ref={ref} className="mt-16 grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-6 lg:gap-4">

@@ -1,43 +1,55 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { BookOpen, LayoutGrid, TrendingUp, Palette, Share2, Globe } from "lucide-react";
+import { BookOpen, LayoutGrid, TrendingUp, Palette, Share2, Globe, PenTool, CheckCircle } from "lucide-react";
 
 const services = [
   {
     icon: BookOpen,
     title: "Book Publishing",
-    desc: "From manuscript to published masterpiece in 48 hours. Print, digital, and audiobook formats available worldwide.",
+    desc: "Get your book published in just 48 hours with our book publishing services. We handle everything from production to Amazon book publishing services and multi-platform distribution.",
     img: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&h=400&fit=crop",
   },
   {
+    icon: PenTool,
+    title: "Ghostwriting",
+    desc: "Need help writing your book? Hire a book writer online and work with experienced fiction book writing consultants and non-fiction book writing experts who bring your ideas to life.",
+    img: "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=600&h=400&fit=crop",
+  },
+  {
+    icon: CheckCircle,
+    title: "Book Editing & Proofreading",
+    desc: "Our editors polish your manuscript through detailed editing and proofreading. We make sure your book meets professional publishing standards while maintaining your unique voice.",
+    img: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&h=400&fit=crop",
+  },
+  {
     icon: LayoutGrid,
-    title: "Book Formatting & Layout",
-    desc: "Professional interior layout for print and eBook. Chicago Manual of Style compliant. All genres covered.",
+    title: "Book Formatting",
+    desc: "We provide professional KDP book formatting services to ensure your book is perfectly structured for Kindle, print, and digital platforms with industry-standard layouts.",
     img: "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=600&h=400&fit=crop",
   },
   {
     icon: TrendingUp,
     title: "Amazon Optimization",
-    desc: "A+ content, keyword-rich descriptions, category targeting, and Best Seller ranking strategies.",
+    desc: "Maximize your visibility with expert Amazon KDP publishing support. Hire an expert for Amazon KDP setup, keyword optimization, category placement, and listing enhancements to boost rankings and sales.",
     img: "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=600&h=400&fit=crop",
   },
   {
     icon: Palette,
-    title: "Cover Design",
-    desc: "Bespoke covers designed by award-winning artists. Market-tested for your genre and audience.",
+    title: "Book Cover Design",
+    desc: "Stand out in a competitive market with visually compelling, genre-specific cover designs that capture attention and increase conversions across online bookstores.",
     img: "https://images.unsplash.com/photo-1499914485622-a88fac536970?w=600&h=400&fit=crop",
   },
   {
     icon: Share2,
     title: "Social Media Marketing",
-    desc: "Launch campaigns that drive pre-orders, reviews, and long-term reader engagement across all platforms.",
+    desc: "Grow your audience with targeted marketing strategies designed for authors. We help you build visibility, engagement, and long-term brand presence across social platforms.",
     img: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&h=400&fit=crop",
   },
   {
     icon: Globe,
-    title: "Global Distribution",
-    desc: "Get your book on Amazon, Barnes & Noble, Apple Books, Kobo, and 40+ major retailers worldwide.",
+    title: "Global Book Distribution",
+    desc: "Reach readers worldwide through our Amazon book publishing services and global distribution network. This way, we make your book available across major online retailers and marketplaces.",
     img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=400&fit=crop",
   },
 ];
@@ -96,7 +108,7 @@ const Services = () => {
       {/* Mobile: vertical stack */}
       <div className="md:hidden container py-20">
         <div className="text-xs uppercase tracking-[0.4em] text-gold mb-3">◆ What We Do</div>
-        <h2 className="font-serif text-4xl text-foreground mb-12">Our Services</h2>
+        <h2 className="font-serif text-4xl text-foreground mb-12">Complete Book Publishing Services</h2>
         <div className="grid gap-6">
           {services.map((s, i) => (
             <ServiceCard key={i} service={s} />
@@ -121,9 +133,9 @@ const Services = () => {
         <div className="absolute top-1/2 -translate-y-1/2 left-0 z-20 container pointer-events-none">
           <div className="max-w-sm">
             <div className="text-xs uppercase tracking-[0.4em] text-gold mb-3">◆ What We Do</div>
-            <h2 className="font-serif text-5xl lg:text-6xl text-foreground leading-[1.05]">Our Services</h2>
+            <h2 className="font-serif text-5xl lg:text-6xl text-foreground leading-[1.05]">Complete Book Publishing Services</h2>
             <p className="text-muted-foreground mt-4">
-              Six pillars of premium digital publishing — engineered for authors who refuse to compromise.
+              We offer full service book publishing packages designed to support authors at every stage.
             </p>
           </div>
         </div>

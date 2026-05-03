@@ -26,11 +26,10 @@ const Contact = () => {
           <div className="relative">
             <div className="text-xs uppercase tracking-[0.4em] text-gold mb-3">◆ Get in touch</div>
             <h2 className="font-serif text-4xl md:text-5xl leading-tight">
-              Ready to Write Your <span className="italic text-gold">Next Chapter?</span>
+              Ready to Write Your <span className="italic text-gold">Next Chapter</span> with a Professional Publishing Company?
             </h2>
             <p className="text-muted-foreground mt-6 leading-relaxed max-w-md">
-              Tell us about your manuscript. We respond to every inquiry within 24 hours with a free
-              consultation and tailored publishing roadmap.
+              Take the next step toward becoming a published author with a trusted book publishing company in the USA. Tell us about your book, and we’ll create a plan based on your goals, genre, and publishing vision.
             </p>
 
             <div className="mt-10 space-y-5">

@@ -71,7 +71,7 @@ const Hero = () => {
 
       <div className="container relative z-10 flex flex-col items-center text-center pt-12 pb-12">
         <div className="text-xs tracking-[0.4em] text-gold uppercase mb-6 opacity-0 animate-[fade-in_0.8s_1.2s_forwards]">
-          ◆ Premium Digital Publishing ◆
+          ◆ Best Company to Publish Your First Book ◆
         </div>
 
         <SplitReveal
@@ -92,17 +92,18 @@ const Hero = () => {
         <div className="flex items-center gap-3 mt-7 opacity-0 animate-[fade-in_0.8s_1.7s_forwards]">
           <span className="h-px w-8 md:w-12 bg-gradient-to-r from-transparent to-gold/70" />
           <span className="text-[10px] md:text-[11px] tracking-[0.35em] text-gold/90 uppercase font-medium">
-            Bestseller-Ready · Globally Distributed · Author-First
+            100% Royalties • Bestseller-Ready • Globally Distributed
           </span>
           <span className="h-px w-8 md:w-12 bg-gradient-to-l from-transparent to-gold/70" />
         </div>
 
         <p
           ref={subRef}
-          className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto mt-6 leading-relaxed"
+          className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mt-6 leading-relaxed"
         >
-          From manuscript to marketplace — we handle editing, formatting, cover design,
-          and global distribution while you focus on writing.
+          Book & Noble delivers professional book publishing services designed for authors. 
+          As a trusted book publishing company in the USA, we specialize in self publishing. 
+          We help you get your book professionally published across Amazon, Barnes & Noble, and worldwide platforms.
         </p>
 
         {/* Floating book arc */}
@@ -150,7 +151,7 @@ const Hero = () => {
             onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
             className="bg-gold text-accent-foreground font-bold uppercase tracking-widest px-10 py-5 rounded-full text-sm shimmer-on-hover hover:shadow-gold transition-all"
           >
-            Publish Your Book →
+            Get Free Quote →
           </MagneticButton>
         </div>
       </div>

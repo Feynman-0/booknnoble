@@ -4,34 +4,46 @@ import SplitReveal from "../SplitReveal";
 
 const testimonials = [
   {
-    name: "Rebecca Hawthorne",
-    book: "The Salt-Lit Sky",
-    img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&h=400&fit=crop",
-    quote: "Book & Noble turned my decade-long manuscript into a #1 Amazon bestseller in three weeks.",
-  },
-  {
-    name: "Daniel Okafor",
-    book: "Lagos After Midnight",
-    img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&h=400&fit=crop",
-    quote: "From cover design to global distribution, every detail felt handled by people who genuinely care.",
-  },
-  {
-    name: "Yuki Tanaka",
-    book: "Threads of Kyoto",
+    name: "Emily Carter",
+    book: "First-Time Author",
     img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=400&fit=crop",
-    quote: "The Amazon optimization alone tripled my royalties. I tell every writer I know about this team.",
+    quote: "Working with Book & Noble made the entire publishing process feel effortless. As a first-time author, I had no idea where to start but their team guided me through everything. Seeing my book live on Amazon was surreal.",
   },
   {
-    name: "Anna Volkov",
-    book: "Winter in Petrograd",
-    img: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600&h=400&fit=crop",
-    quote: "They believed in my story before the world did. Now my novel is in 14 languages.",
-  },
-  {
-    name: "Marcus Whitfield",
-    book: "The Cartographer's Son",
+    name: "Daniel Brooks",
+    book: "Amazon Bestseller",
     img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop",
-    quote: "Professional, fast, and stunning craft at every stage. My book finally looks like it deserved to.",
+    quote: "I was specifically looking for reliable Amazon KDP publishing support, and they delivered beyond expectations. The optimization alone helped my book gain visibility within weeks.",
+  },
+  {
+    name: "Sophia Reynolds",
+    book: "Independent Author",
+    img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&h=400&fit=crop",
+    quote: "Their book editing and proofreading team is exceptional. They refined my manuscript without changing my voice, which meant a lot to me as a writer.",
+  },
+  {
+    name: "Michael Turner",
+    book: "Non-Fiction Writer",
+    img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&h=400&fit=crop",
+    quote: "I hired them for professional book writing services, and the experience was smooth from start to finish. The writer understood my vision perfectly and delivered something I’m truly proud of.",
+  },
+  {
+    name: "Olivia Bennett",
+    book: "Fiction Author",
+    img: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600&h=400&fit=crop",
+    quote: "The cover design and book formatting services were top-tier. My book looks just as professional as anything you’d find in a bookstore.",
+  },
+  {
+    name: "Nathan Collins",
+    book: "Serial Author",
+    img: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=600&h=400&fit=crop",
+    quote: "I needed a team that could handle everything from writing to publishing. Their full service book publishing package saved me months of effort and confusion.",
+  },
+  {
+    name: "Hannah Scott",
+    book: "Debut Author",
+    img: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=600&h=400&fit=crop",
+    quote: "I was searching for the best company to publish my first book and I’m glad I chose them. They made the process simple, transparent, and actually enjoyable.",
   },
 ];
 
@@ -52,8 +64,8 @@ const Testimonials = () => {
         <div className="text-xs uppercase tracking-[0.4em] text-gold mb-3">◆ Testimonials</div>
         <SplitReveal
           as="h2"
-          text="Authors Who Made It"
-          goldWords={[2, 3]}
+          text="See What Our Clients Have to Say About Us"
+          goldWords={[7, 8]}
           className="font-serif text-4xl md:text-5xl"
         />
       </div>

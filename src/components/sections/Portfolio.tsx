@@ -53,10 +53,10 @@ const Portfolio = () => {
       <div className="container text-center mb-14">
         <div className="text-xs uppercase tracking-[0.4em] text-gold mb-3">◆ Portfolio</div>
         <h2 className="font-serif text-4xl md:text-5xl">
-          Books We've <span className="italic text-gold">Brought to Life</span>
+          Books Brought to Life By Us
         </h2>
-        <p className="text-muted-foreground mt-4">
-          Every cover tells a story. Every title, a journey.
+        <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
+          See our diverse collection of titles created through our professional book publishing services, where every book reflects a unique vision brought to life with creativity.
         </p>
       </div>
       <div className="space-y-6">

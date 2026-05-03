@@ -3,14 +3,18 @@ import { Plus } from "lucide-react";
 import SplitReveal from "../SplitReveal";
 
 const faqs = [
-  { q: "How long does the publishing process take?", a: "Our standard turnaround is 48 hours for full publication once your manuscript is finalized. Editing and design phases vary by scope and book length, typically 2–6 weeks." },
-  { q: "What is included in the publishing package?", a: "Editing, formatting, cover design, ISBN registration, eBook & print conversion, distribution to 40+ retailers, and 90 days of marketing support." },
-  { q: "Do I retain the rights to my book?", a: "Absolutely. You retain 100% of your copyright and royalties. We act as your publishing partner, not your owner." },
-  { q: "How much does it cost to publish with Book & Noble?", a: "Packages start at $1,499 for essentials and scale based on services. Every quote is custom — request a free consultation for transparent pricing." },
-  { q: "Can I publish on Amazon and other platforms simultaneously?", a: "Yes — we list your book on Amazon, Barnes & Noble, Apple Books, Kobo, Google Play, and dozens more, all in one launch." },
-  { q: "Do you offer editing services for non-English manuscripts?", a: "We currently support English, Spanish, French, German, Arabic, and Mandarin manuscripts, with translation services available." },
-  { q: "What file formats do I need to submit?", a: "Microsoft Word (.docx) is preferred, but we also accept Google Docs, Pages, Scrivener exports, and PDF manuscripts." },
-  { q: "How do royalties work?", a: "You earn standard retailer royalties (35–70% on Amazon, varies elsewhere). We do not take a percentage of your sales — your earnings are yours." },
+  { q: "What are professional book publishing services?", a: "Professional book publishing services include everything needed to turn your manuscript into a published book, such as editing, formatting, cover design, and distribution. A full-service provider helps authors navigate self publishing and launch their books across major platforms." },
+  { q: "How do I publish my first book?", a: "To publish your first book, you need to prepare your manuscript, format it properly, design a cover, and upload it to platforms like Amazon. Many authors choose a book publishing company in the USA to handle the process professionally and avoid technical challenges." },
+  { q: "What is Amazon KDP publishing?", a: "Amazon KDP publishing (Kindle Direct Publishing) is a platform that allows authors to self-publish eBooks and paperbacks. With expert guidance, you can optimize your book listing, improve visibility, and reach a global audience." },
+  { q: "Do you offer full service book publishing packages?", a: "Yes, we offer full service book publishing packages that cover writing, editing, book formatting and publishing, cover design, and Amazon book publishing services, ensuring a complete end-to-end solution." },
+  { q: "Can I hire a professional to write my book?", a: "Absolutely. You can hire a book writer online through our professional book writing services. Our team includes experienced fiction book writing consultants and non-fiction book writing experts who can bring your ideas to life." },
+  { q: "What is included in book formatting and publishing?", a: "Book formatting and publishing includes structuring your manuscript for readability, applying professional layouts, and preparing files for Kindle, print, and other digital platforms." },
+  { q: "How long does it take to publish a book?", a: "The timeline varies depending on the services required. Basic Amazon KDP publishing can take a few days, while complete book publishing services including editing and design may take a few weeks." },
+  { q: "Do I retain rights to my book?", a: "Yes, with our self publishing model, authors retain full ownership and rights to their work, including royalties and distribution control." },
+  { q: "What makes your company the best choice for first-time authors?", a: "We provide personalized guidance, transparent processes, and complete support, making us a trusted choice for authors searching for the best company to publish my first book." },
+  { q: "Do you help with Amazon optimization?", a: "Yes, we offer expert Amazon book publishing services, including keyword optimization, category selection, and listing enhancement to improve your book’s visibility and ranking." },
+  { q: "Can you publish my book globally?", a: "Yes, we provide global distribution through Amazon KDP publishing and other platforms, making your book available to readers worldwide." },
+  { q: "How do I get started with your publishing services?", a: "You can get started by filling out our contact form or requesting a free consultation. Our team will review your manuscript and recommend the best book publishing services based on your goals." },
 ];
 
 const FAQ = () => {
