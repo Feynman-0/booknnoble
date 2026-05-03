@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { toast } from "sonner";
 
 const SubscribeBanner = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -32,11 +33,31 @@ const SubscribeBanner = () => {
           Join Thousands of Authors Using Our Professional Book Publishing Services
         </h3>
         <form
-          onSubmit={(e) => e.preventDefault()}
+          onSubmit={async (e) => {
+            e.preventDefault();
+            const email = (e.target as HTMLFormElement).email.value;
+            
+            try {
+              const response = await fetch('/api/subscribe', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email }),
+              });
+              
+              if (!response.ok) throw new Error('Failed');
+              
+              (e.target as HTMLFormElement).reset();
+              toast.success("Subscribed successfully!");
+            } catch (error) {
+              toast.error("Failed to subscribe. Please try again.");
+            }
+          }}
           className="flex flex-col sm:flex-row gap-3 w-full md:w-auto md:min-w-[480px]"
         >
           <input
+            name="email"
             type="email"
+            required
             placeholder="your@email.com"
             className="flex-1 bg-transparent border border-foreground/40 text-foreground placeholder:text-foreground/50 rounded-full px-6 py-3.5 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/30 transition-all"
           />

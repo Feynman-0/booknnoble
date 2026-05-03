@@ -32,7 +32,7 @@ const Footer = () => (
         <div>
           <div className="text-xs uppercase tracking-[0.3em] text-gold mb-5">Contact</div>
           <ul className="space-y-3 text-sm text-foreground/70">
-            <li>hello@bookandnoble.com</li>
+            <li>oliverkeen.booksandnoble@gmail.com</li>
             <li>+1 (800) 555-0192</li>
           </ul>
           <div className="flex gap-3 mt-5">

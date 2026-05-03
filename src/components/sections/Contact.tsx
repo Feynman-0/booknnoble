@@ -6,14 +6,31 @@ import { toast } from "sonner";
 const Contact = () => {
   const [status, setStatus] = useState<"idle" | "loading" | "done">("idle");
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("loading");
-    setTimeout(() => {
+    
+    // Get form data
+    const formData = new FormData(e.target as HTMLFormElement);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) throw new Error('Failed to send');
+
       setStatus("done");
       toast.success("Message sent! We'll be in touch within 24 hours.");
+      (e.target as HTMLFormElement).reset();
       setTimeout(() => setStatus("idle"), 2500);
-    }, 1500);
+    } catch (error) {
+      setStatus("idle");
+      toast.error("Failed to send message. Please try again later.");
+    }
   };
 
   return (
@@ -34,7 +51,7 @@ const Contact = () => {
 
             <div className="mt-10 space-y-5">
               {[
-                { Icon: Mail, label: "hello@bookandnoble.com" },
+                { Icon: Mail, label: "oliverkeen.booksandnoble@gmail.com" },
                 { Icon: Phone, label: "+1 (800) 555-0192" },
                 { Icon: Globe, label: "New York · London · Dubai" },
               ].map(({ Icon, label }) => (
@@ -50,11 +67,11 @@ const Contact = () => {
         </div>
 
         <form onSubmit={onSubmit} className="bg-card border border-border rounded-3xl p-8 md:p-10 space-y-5">
-          <FloatInput label="Your Name" type="text" required />
-          <FloatInput label="Email Address" type="email" required />
+          <FloatInput name="name" label="Your Name" type="text" required />
+          <FloatInput name="email" label="Email Address" type="email" required />
           <div>
             <label className="text-xs uppercase tracking-widest text-muted-foreground">Service Interest</label>
-            <select className="w-full mt-2 bg-input border border-border rounded-lg px-4 py-3 text-foreground focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/30 transition">
+            <select name="service" className="w-full mt-2 bg-input border border-border rounded-lg px-4 py-3 text-foreground focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/30 transition">
               <option>Book Publishing</option>
               <option>Formatting</option>
               <option>Cover Design</option>
@@ -66,6 +83,7 @@ const Contact = () => {
           <div>
             <label className="text-xs uppercase tracking-widest text-muted-foreground">Tell Us About Your Book</label>
             <textarea
+              name="message"
               rows={4}
               required
               className="w-full mt-2 bg-input border border-border rounded-lg px-4 py-3 text-foreground focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/30 transition resize-none"
@@ -86,10 +104,11 @@ const Contact = () => {
   );
 };
 
-const FloatInput = ({ label, type, required }: { label: string; type: string; required?: boolean }) => (
+const FloatInput = ({ label, type, required, name }: { label: string; type: string; required?: boolean; name: string }) => (
   <div>
     <label className="text-xs uppercase tracking-widest text-muted-foreground">{label}</label>
     <input
+      name={name}
       type={type}
       required={required}
       className="w-full mt-2 bg-input border border-border rounded-lg px-4 py-3 text-foreground focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/30 transition"
